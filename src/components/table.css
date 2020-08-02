@@ -1,0 +1,18 @@
+.table__element {
+  width: 40px;
+  height: 40px;
+  background-color: dimgrey;
+  border-color: darkgray;
+  border-width: 1px;
+}
+
+.level__button {
+  width: 2.5rem;
+  border-radius: 0.375rem;
+  text-align: center;
+}
+
+.outline {
+  outline: none !important;
+  border: 0 !important;
+}
