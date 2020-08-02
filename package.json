@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.1.2",
     "autoprefixer": "^9.8.6",
     "classnames": "^2.2.6",
+    "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -17,11 +18,13 @@
     "tailwindcss": "^1.6.1"
   },
   "scripts": {
-    "start": "concurrently -n Tailwind,React 'npm run watch:css' 'react-scripts start'",
-    "build": "npm run build:css && react-scripts build",
+    "build:tailwind": "tailwind build src/tailwind.css -o src/tailwind.output.css",
+    "watch:tailwind": "chokidar 'src/**/*.css' 'src/**/*.scss' --ignore src/tailwind.output.css -c 'npm run build:tailwind'",
+    "start": "npm-run-all build:tailwind --parallel watch:tailwind start:react",
+    "start:react": "react-scripts start",
+    "prebuild": "run-s build:tailwind",
+    "build": "react-scripts build",
     "test": "react-scripts test",
-    "build:css": "tailwind build src/App.css -o src/index.css",
-    "watch:css": "chokidar 'src/App.css' -c 'npm run build:css'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
