@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./tailwind.output.css";
+import "./assets/main.css";
 import Home from "./components/home";
 import store from "./app/store";
 import { Provider } from "react-redux";
