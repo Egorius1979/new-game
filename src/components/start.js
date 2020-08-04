@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setTable, levelDown, levelUp } from "../app/game";
+import { setTable, levelDown, levelUp } from "../Reducers/game";
 
 const Start = () => {
   const [valueX, setValueX] = useState("");

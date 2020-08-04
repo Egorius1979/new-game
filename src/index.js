@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./assets/main.css";
 import Home from "./components/home";
-import store from "./app/store";
+import store from "./Reducers/store";
 import { Provider } from "react-redux";
 import * as serviceWorker from "./serviceWorker";
+import "./tailwind.output.css";
 
 ReactDOM.render(
   <React.StrictMode>

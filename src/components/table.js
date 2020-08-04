@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import classnames from "classnames";
-import { setGameTable, setCell, cellClicked } from "../app/game";
+import { setGameTable, setCell, cellClicked } from "../Reducers/game";
 
 const Table = () => {
   const table = useSelector((store) => store.game.table);
