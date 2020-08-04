@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import classnames from "classnames";
-import { setGameTable, setCell, cellClicked } from "../Reducers/game";
+import { setGameTable, setCell, cellClicked } from "../reducers/game";
 
 const Table = () => {
   const table = useSelector((store) => store.game.table);
@@ -39,13 +39,6 @@ const Table = () => {
               key={it}
               type="button"
               aria-label="click"
-              // className={`table__element ${
-              //   gametable[it] === "yellow"
-              //     ? "bg-orange-300"
-              //     : gametable[it] === "green"
-              //     ? "bg-green-300"
-              //     : "bg-red-300"
-              // }`}
               className={classnames("table__element", {
                 "bg-orange-300": gametable[it] === "yellow",
                 "bg-green-300": gametable[it] === "green",
@@ -75,7 +68,5 @@ const Table = () => {
     </div>
   );
 };
-
-Table.propTypes = {};
 
 export default Table;

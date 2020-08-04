@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setTable, levelDown, levelUp } from "../Reducers/game";
+import { setTable, levelDown, levelUp } from "../reducers/game";
 
 const Start = () => {
   const [valueX, setValueX] = useState("");
@@ -84,7 +84,5 @@ const Start = () => {
     </div>
   );
 };
-
-Start.propTypes = {};
 
 export default Start;

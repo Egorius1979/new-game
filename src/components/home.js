@@ -2,7 +2,7 @@ import React from "react";
 import Start from "./start";
 import Table from "./table";
 
-const Home = () => {
+const App = () => {
   return (
     <div className="bg-gray-400 h-screen pt-5">
       <div>
@@ -15,6 +15,4 @@ const Home = () => {
   );
 };
 
-Home.propTypes = {};
-
-export default Home;
+export default App;

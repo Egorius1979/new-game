@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Home from "./components/home";
-import store from "./Reducers/store";
+import App from "./components/home";
+import store from "./reducers/store";
 import { Provider } from "react-redux";
 import * as serviceWorker from "./serviceWorker";
 import "./tailwind.output.css";
@@ -9,7 +9,7 @@ import "./tailwind.output.css";
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Home />
+      <App />
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")
