@@ -12,7 +12,7 @@ $ git clone git@github.com:Egorius1979/game-react-redux.git
 $ yarn install
 ```
 
-_I recommend using `yarn` for installing packages, but you can use `npm` instead_:
+_*I recommend using `yarn` for installing packages, but you can use `npm` instead_:
 
 ```shell
 $ npm install
