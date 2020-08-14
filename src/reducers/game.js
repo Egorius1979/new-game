@@ -21,7 +21,7 @@ export default (state = initialState, action) => {
     case SET_GAME_TABLE:
       return {
         ...state,
-        gametable: action.object,
+        gametable: action.gametable,
         winner: "",
         counter: 0,
         greencell: 0,
@@ -49,10 +49,10 @@ export function setTable(x, y) {
 
 export function setGameTable(table) {
   const array = new Array(table.x * table.y).fill(0);
-  const object = array.reduce((acc, rec, index) => {
+  const gametable = array.reduce((acc, rec, index) => {
     return { ...acc, [index + 1]: "start" };
   }, {});
-  return { type: SET_GAME_TABLE, object };
+  return { type: SET_GAME_TABLE, gametable };
 }
 
 export function setCell(gametable, counter) {
