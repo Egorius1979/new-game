@@ -59,7 +59,7 @@ const Table = () => {
   }
   return (
     <div className="flex items-center justify-center">
-      <div className="w-64 mt-10 px-4 py-2 border-2 bg-gray-800 border-teal-600 rounded-lg  text-center text-white">
+      <div className="w-64 mt-10 px-4 py-2 border-2 bg-gray-800 border-white rounded-lg  text-center text-white shadow-xl">
         Игра: создаётся поле X * Y. Через равные промежутки времени в случайном
         порядке выбирается клетка. Успейте нажать на неё, пока она жёлтого
         цвета. Выигрывает тот, чьих клеток ( зелёные - ваши, красные -
