@@ -4,11 +4,9 @@ import classnames from "classnames";
 import { setGameTable, setCell, cellClicked } from "../reducers/game";
 
 const Table = () => {
-  const table = useSelector((store) => store.game.table);
-  const gametable = useSelector((store) => store.game.gametable);
-  const winner = useSelector((store) => store.game.winner);
-  const counter = useSelector((store) => store.game.counter);
-  const timer = useSelector((store) => store.game.timer);
+  const { table, gametable, winner, counter, timer } = useSelector(
+    (store) => store.game
+  );
   const width = 40 * table.y;
   const dispatch = useDispatch();
 
