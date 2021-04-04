@@ -83,15 +83,16 @@ export function setCell(gametable, counter) {
           },
           winner: "вы победили, молодцом!",
         });
+      } else {
+        return dispatch({
+          type: SET_CELL,
+          gametable: {
+            ...gametable,
+            [yellow]: yellow === greencell ? "green" : "red",
+          },
+          winner: "ребята, это ничья!",
+        });
       }
-      return dispatch({
-        type: SET_CELL,
-        gametable: {
-          ...gametable,
-          [yellow]: yellow === greencell ? "green" : "red",
-        },
-        winner: "ребята, это ничья!",
-      });
     } else if (
       red.length === Math.floor(keys.length / 2) &&
       yellow !== greencell
@@ -127,16 +128,17 @@ export function setCell(gametable, counter) {
         },
         counter: counter + 1,
       });
+    } else {
+      return dispatch({
+        type: SET_CELL,
+        gametable: {
+          ...gametable,
+          [filteredTable[Math.floor(Math.random() * filteredTable.length)]]:
+            "yellow",
+        },
+        counter: counter + 1,
+      });
     }
-    return dispatch({
-      type: SET_CELL,
-      gametable: {
-        ...gametable,
-        [filteredTable[Math.floor(Math.random() * filteredTable.length)]]:
-          "yellow",
-      },
-      counter: counter + 1,
-    });
   };
 }
 
