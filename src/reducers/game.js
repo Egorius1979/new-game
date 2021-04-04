@@ -74,8 +74,7 @@ export function setCell(gametable, counter) {
           },
           winner: "комп победил!",
         });
-      }
-      if (yellow === greencell && green.length === keys.length / 2) {
+      } else if (yellow === greencell && green.length === keys.length / 2) {
         return dispatch({
           type: SET_CELL,
           gametable: {
@@ -93,8 +92,10 @@ export function setCell(gametable, counter) {
         },
         winner: "ребята, это ничья!",
       });
-    }
-    if (red.length === Math.floor(keys.length / 2) && yellow !== greencell) {
+    } else if (
+      red.length === Math.floor(keys.length / 2) &&
+      yellow !== greencell
+    ) {
       return dispatch({
         type: SET_CELL,
         gametable: {
@@ -103,8 +104,10 @@ export function setCell(gametable, counter) {
         },
         winner: "комп победил!",
       });
-    }
-    if (green.length === Math.floor(keys.length / 2) && yellow === greencell) {
+    } else if (
+      green.length === Math.floor(keys.length / 2) &&
+      yellow === greencell
+    ) {
       return dispatch({
         type: SET_CELL,
         gametable: {
@@ -113,8 +116,7 @@ export function setCell(gametable, counter) {
         },
         winner: "вы победили, молодцом!",
       });
-    }
-    if (yellow) {
+    } else if (yellow) {
       return dispatch({
         type: SET_CELL,
         gametable: {
